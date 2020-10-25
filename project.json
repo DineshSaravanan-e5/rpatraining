@@ -1,6 +1,6 @@
 {
-  "name": "print largest number",
-  "description": "find largest number",
+  "name": "findNickName",
+  "description": "Find nick name of the user ",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.9.3]",
@@ -43,7 +43,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "0cc8adad-3e25-4549-a4b8-27590cfc08ac",
+      "uniqueId": "357f3a1e-faeb-4cf1-99e8-fb5bba708e19",
       "input": [],
       "output": []
     }
