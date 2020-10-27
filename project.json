@@ -1,6 +1,6 @@
 {
-  "name": "findNickName",
-  "description": "Find nick name of the user ",
+  "name": "Find largest number",
+  "description": "while and do while",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.9.3]",
@@ -43,7 +43,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "357f3a1e-faeb-4cf1-99e8-fb5bba708e19",
+      "uniqueId": "c115939b-0215-4867-8c2a-25e4920d76da",
       "input": [],
       "output": []
     }
