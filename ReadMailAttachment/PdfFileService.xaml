@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>948,700.666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>912,700.666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExcelFileService_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -32,6 +32,7 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Security</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -81,7 +82,7 @@
           <av:Size x:Key="ShapeSize">200,98</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Send mai to the  user The Fils is not supported " Body="[Mail.Body]" DisplayName="Send SMTP Mail Message" Email="[UserMail]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="200,98" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[UserPassword]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Attachement file is not suppot" To="dk17307307@gmail.com">
+      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Send mai to the  user The Fils is not supported " Body="[Mail.Body]" DisplayName="Send SMTP Mail Message" Email="[UserMail]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="200,98" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[UserPassword.ToString]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Attachement file is not suppot" To="dk17307307@gmail.com">
         <ui:SendMail.Files>
           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
         </ui:SendMail.Files>

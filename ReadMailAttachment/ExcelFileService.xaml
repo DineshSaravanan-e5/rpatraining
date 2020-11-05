@@ -9,10 +9,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>948,870</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>912,870</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PdfFileService_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="32">
+    <scg:List x:TypeArguments="x:String" Capacity="64">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -45,6 +45,7 @@
       <x:String>UiPath.Excel</x:String>
       <x:String>UiPath.Mail.Activities</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Security</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -276,33 +277,33 @@
                           <av:PointCollection x:Key="ConnectorLocation">300,577.333333333333 300,589</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Search and read The Each Detail and Stored  in data Table" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe BP'" sap:VirtualizedContainerService.HintSize="510,493.333333333333" sap2010:WorkflowViewState.IdRef="BrowserScope_10" InformativeScreenshot="e67960b5b5b83ee5ac4e4b196bd3080b" Selector="&lt;html app='chrome.exe' title='BP Travel - Search' /&gt;">
+                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Search and read The Each Detail and Stored  in data Table" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe BP'" sap:VirtualizedContainerService.HintSize="200,114.666666666667" sap2010:WorkflowViewState.IdRef="BrowserScope_10" InformativeScreenshot="e67960b5b5b83ee5ac4e4b196bd3080b" Selector="&lt;html app='chrome.exe' title='BP Travel - Search' /&gt;">
                         <ui:BrowserScope.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,316.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="480.666666666667,420.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_18">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <TryCatch sap2010:Annotation.AnnotationText="Not Found Error Handle using Try Catch" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,224.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                              <TryCatch sap2010:Annotation.AnnotationText="Not Found Error Handle using Try Catch" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438.666666666667,328.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <TryCatch.Try>
-                                  <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[BPTravelQuoteNumber]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="806.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                                  <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[BPTravelQuoteNumber]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="806.666666666667,2784.66666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                                     <ui:ForEachRow.Body>
                                       <ActivityAction x:TypeArguments="sd:DataRow">
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="756,2628.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="756,2632" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                           <Sequence.Variables>
                                             <Variable x:TypeArguments="x:Boolean" Name="BoolResult" />
                                           </Sequence.Variables>
@@ -357,7 +358,7 @@
                                               </ui:Target>
                                             </ui:UiElementExists.Target>
                                           </ui:UiElementExists>
-                                          <If Condition="[BoolResult]" sap:VirtualizedContainerService.HintSize="714,256.666666666667" sap2010:WorkflowViewState.IdRef="If_1">
+                                          <If Condition="[BoolResult]" sap:VirtualizedContainerService.HintSize="714,260" sap2010:WorkflowViewState.IdRef="If_1">
                                             <If.Then>
                                               <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                 <ui:Click.CursorPosition>
@@ -586,7 +587,7 @@
                                   </ui:ForEachRow>
                                 </TryCatch.Try>
                                 <TryCatch.Catches>
-                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
