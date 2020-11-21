@@ -9,7 +9,7 @@
   <sap:VirtualizedContainerService.HintSize>948,468</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Calculation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="70">
+    <scg:List x:TypeArguments="x:String" Capacity="37">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -50,7 +50,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="56">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="29">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -92,7 +92,7 @@
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ContinentName" />
       <Variable x:TypeArguments="x:Int32" Name="WorldDeathCount" />
-      <Variable x:TypeArguments="x:Int32" Name="WordTotalCases" />
+      <Variable x:TypeArguments="x:Int32" Name="WorldTotalCases" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -142,13 +142,14 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1573.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1728" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="ResultContinent" />
                     <Variable x:TypeArguments="njl:JObject" Name="ContinentObject" />
                     <Variable x:TypeArguments="x:String" Name="Demouse" />
                     <Variable x:TypeArguments="x:String" Name="Res" />
                     <Variable x:TypeArguments="x:String" Name="Res1" />
+                    <Variable x:TypeArguments="x:String" Name="ResTable" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -327,10 +328,10 @@
                               </Assign>
                               <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_14">
                                 <Assign.To>
-                                  <OutArgument x:TypeArguments="x:Int32">[WordTotalCases]</OutArgument>
+                                  <OutArgument x:TypeArguments="x:Int32">[WorldTotalCases]</OutArgument>
                                 </Assign.To>
                                 <Assign.Value>
-                                  <InArgument x:TypeArguments="x:Int32">[WordTotalCases+Cint(TotalCases)]</InArgument>
+                                  <InArgument x:TypeArguments="x:Int32">[WorldTotalCases+Cint(TotalCases)]</InArgument>
                                 </Assign.Value>
                               </Assign>
                               <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_11">
@@ -404,6 +405,8 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:AddDataColumn>
+                  <ui:OutputDataTable DataTable="[WorldometerTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[ResTable]" />
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[ResTable]" />
                   <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="Add WorldWide bsed death  percentage column" ColumnName="WorldDeathPercentage" DataTable="[WorldometerTable]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="334,67.3333333333333" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -418,48 +421,58 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,282.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <Sequence sap:VirtualizedContainerService.HintSize="242,254" sap2010:WorkflowViewState.IdRef="Sequence_17">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <If sap2010:Annotation.AnnotationText="Find the percentage and added to the data table" Condition="[String.IsNullOrEmpty(row(&quot;Deaths&quot;).ToString) or String.IsNullOrEmpty(&quot;TotalCases&quot;)]" DisplayName="Check Value is empty or not" sap:VirtualizedContainerService.HintSize="484,254" sap2010:WorkflowViewState.IdRef="If_4">
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[row(1).ToString]" />
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,282.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_14">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If.Then>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[&quot;cell is empty&quot;]" />
-                            </If.Then>
-                            <If.Else>
-                              <Sequence DisplayName="Calculate Percentage - seq" sap:VirtualizedContainerService.HintSize="304,256" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_17">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:Object">[row("ContinentDeathPercentage")]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:Double">[CDbl((CInt(row("Deaths")) / CInt(row("Population"+"&lt;br&gt;"+"(2020)")))*100)]</InArgument>
-                                  </Assign.Value>
-                                </Assign>
-                                <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_18">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:Object">[row("WorldDeathPercentage")]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:Double">[cdbl((cint(row("Deaths")) /cint(row("TotalCases")))*100)]</InArgument>
-                                  </Assign.Value>
-                                </Assign>
-                              </Sequence>
-                            </If.Else>
-                          </If>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[&quot;Calculated Percentage &quot;]" />
+                            <If sap2010:Annotation.AnnotationText="Find the percentage and added to the data table" Condition="[String.IsNullOrEmpty(row(&quot;Deaths&quot;).ToString) or String.IsNullOrEmpty(&quot;TotalCases&quot;)]" DisplayName="Check Value is empty or not" sap:VirtualizedContainerService.HintSize="484,254" sap2010:WorkflowViewState.IdRef="If_4">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[&quot;cell is empty&quot;]" />
+                              </If.Then>
+                              <If.Else>
+                                <Sequence DisplayName="Calculate Percentage - seq" sap:VirtualizedContainerService.HintSize="304,441.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_32" Level="Info" Message="[&quot;Calculate Continental Percentage&quot;+row(&quot;Deaths&quot;).ToString+&quot; &quot;+row(&quot;TotalCases&quot;).ToString]" />
+                                  <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Object">[row("ContinentDeathPercentage")]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int64" xml:space="preserve">[((CLng(row("Deaths"))  mod CLng(row(2)))*100)]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Info" Message="[&quot;Calculate overall percentage&quot;]" />
+                                  <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Object">[row("WorldDeathPercentage")]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[((cint(row("Deaths")) mod cint(row("TotalCases")))*100)]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[&quot;Calculated Percentage &quot;]" />
+                          </Sequence>
                         </Sequence>
                       </ActivityAction>
                     </ui:ForEachRow.Body>
@@ -469,7 +482,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ForEachRow>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[WordTotalCases.ToString+&quot; &quot;+WorldDeathCount.ToString]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[WorldTotalCases.ToString+&quot; &quot;+WorldDeathCount.ToString]" />
                 </Sequence>
               </ActivityAction>
             </ui:OpenBrowser.Body>
