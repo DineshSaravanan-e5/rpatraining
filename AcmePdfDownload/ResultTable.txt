@@ -1,0 +1,99 @@
+﻿<tr><td>61122735</td><td>Process Vendor Invoice</td><td>WI3</td><td>Completed</td><td>2019-08-31</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122765</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2019-07-07</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122774</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-05-22</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122707</td><td>Calculate Client Security Hash</td><td>WI5</td><td>Open</td><td>2018-10-30</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122752</td><td>Research Client Check Copy</td><td>WI2</td><td>Open</td><td>2018-06-01</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122766</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-06</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122762</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-28</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122738</td><td>Process Vendor Invoice</td><td>WI3</td><td>Open</td><td>2018-02-03</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122770</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-07-20</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122764</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-05-13</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122735</td><td>Process Vendor Invoice</td><td>WI3</td><td>Completed</td><td>2019-08-31</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122765</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2019-07-07</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122774</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-05-22</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122707</td><td>Calculate Client Security Hash</td><td>WI5</td><td>Open</td><td>2018-10-30</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122752</td><td>Research Client Check Copy</td><td>WI2</td><td>Open</td><td>2018-06-01</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122766</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-06</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122762</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-28</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122738</td><td>Process Vendor Invoice</td><td>WI3</td><td>Open</td><td>2018-02-03</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122770</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-07-20</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122764</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-05-13</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122735</td><td>Process Vendor Invoice</td><td>WI3</td><td>Completed</td><td>2019-08-31</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122765</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2019-07-07</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122774</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-05-22</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122707</td><td>Calculate Client Security Hash</td><td>WI5</td><td>Open</td><td>2018-10-30</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122752</td><td>Research Client Check Copy</td><td>WI2</td><td>Open</td><td>2018-06-01</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122766</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-06</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122762</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-28</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122738</td><td>Process Vendor Invoice</td><td>WI3</td><td>Open</td><td>2018-02-03</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122770</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-07-20</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122764</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-05-13</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122735</td><td>Process Vendor Invoice</td><td>WI3</td><td>Completed</td><td>2019-08-31</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122765</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2019-07-07</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122774</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-05-22</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122707</td><td>Calculate Client Security Hash</td><td>WI5</td><td>Open</td><td>2018-10-30</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122752</td><td>Research Client Check Copy</td><td>WI2</td><td>Open</td><td>2018-06-01</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122766</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-06</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122762</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-28</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122738</td><td>Process Vendor Invoice</td><td>WI3</td><td>Open</td><td>2018-02-03</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122770</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-07-20</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122764</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-05-13</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122735</td><td>Process Vendor Invoice</td><td>WI3</td><td>Completed</td><td>2019-08-31</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122765</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2019-07-07</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122774</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-05-22</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122707</td><td>Calculate Client Security Hash</td><td>WI5</td><td>Open</td><td>2018-10-30</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122752</td><td>Research Client Check Copy</td><td>WI2</td><td>Open</td><td>2018-06-01</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122766</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-06</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122762</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-28</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122738</td><td>Process Vendor Invoice</td><td>WI3</td><td>Open</td><td>2018-02-03</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122770</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-07-20</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122764</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-05-13</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122735</td><td>Process Vendor Invoice</td><td>WI3</td><td>Completed</td><td>2019-08-31</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122765</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2019-07-07</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122774</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-05-22</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122707</td><td>Calculate Client Security Hash</td><td>WI5</td><td>Open</td><td>2018-10-30</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122752</td><td>Research Client Check Copy</td><td>WI2</td><td>Open</td><td>2018-06-01</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122766</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-06</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122762</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-28</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122738</td><td>Process Vendor Invoice</td><td>WI3</td><td>Open</td><td>2018-02-03</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122770</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-07-20</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122764</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-05-13</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122735</td><td>Process Vendor Invoice</td><td>WI3</td><td>Completed</td><td>2019-08-31</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122765</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2019-07-07</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122774</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-05-22</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122707</td><td>Calculate Client Security Hash</td><td>WI5</td><td>Open</td><td>2018-10-30</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122752</td><td>Research Client Check Copy</td><td>WI2</td><td>Open</td><td>2018-06-01</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122766</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-06</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122762</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-28</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122738</td><td>Process Vendor Invoice</td><td>WI3</td><td>Open</td><td>2018-02-03</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122770</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-07-20</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122764</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-05-13</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122735</td><td>Process Vendor Invoice</td><td>WI3</td><td>Completed</td><td>2019-08-31</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122765</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2019-07-07</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122774</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-05-22</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122707</td><td>Calculate Client Security Hash</td><td>WI5</td><td>Open</td><td>2018-10-30</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122752</td><td>Research Client Check Copy</td><td>WI2</td><td>Open</td><td>2018-06-01</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122766</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-06</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122762</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-28</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122738</td><td>Process Vendor Invoice</td><td>WI3</td><td>Open</td><td>2018-02-03</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122770</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-07-20</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122764</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-05-13</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122735</td><td>Process Vendor Invoice</td><td>WI3</td><td>Completed</td><td>2019-08-31</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122765</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2019-07-07</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122774</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-05-22</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122707</td><td>Calculate Client Security Hash</td><td>WI5</td><td>Open</td><td>2018-10-30</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122752</td><td>Research Client Check Copy</td><td>WI2</td><td>Open</td><td>2018-06-01</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122766</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-06</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122762</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-06-28</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122738</td><td>Process Vendor Invoice</td><td>WI3</td><td>Open</td><td>2018-02-03</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122770</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-07-20</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122764</td><td>Research Client Check Copy</td><td>WI2</td><td>Completed</td><td>2020-05-13</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122785</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2017-12-06</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122709</td><td>Calculate Client Security Hash</td><td>WI5</td><td>Open</td><td>2017-09-01</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122789</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2020-07-20</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122731</td><td>Process Vendor Invoice</td><td>WI3</td><td>Open</td><td>2019-10-10</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122769</td><td>Verify Account Position</td><td>WI1</td><td>Open</td><td>2018-08-28</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122753</td><td>Research Client Check Copy</td><td>WI2</td><td>Open</td><td>2020-07-18</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122755</td><td>Research Client Check Copy</td><td>WI2</td><td>Open</td><td>2020-10-01</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122761</td><td>Research Client Check Copy</td><td>WI2</td><td>Open</td><td>2020-02-14</td><td></td><td>year less than 2018</td><td></td></tr>
+<tr><td>61122712</td><td>Generate Yearly Report for Vendor</td><td>WI4</td><td>Open</td><td>2018-02-21</td><td></td><td>year less than 2018</td><td></td></tr>
