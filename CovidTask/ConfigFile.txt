@@ -1,3 +1,0 @@
-{
-	"Continents": ["Europe","Asia","North America","Africa"]
-}
