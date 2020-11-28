@@ -3,8 +3,9 @@
   "description": "",
   "main": "Main.xaml",
   "dependencies": {
-    "NGOTask": "[1.0.2]",
+    "NGOTask": "[1.0.6]",
     "UiPath.Excel.Activities": "[2.9.3]",
+    "UiPath.GSuite.Activities": "[1.8.0]",
     "UiPath.Mail.Activities": "[1.9.3]",
     "UiPath.System.Activities": "[20.10.1]",
     "UiPath.UIAutomation.Activities": "[20.10.6]"
@@ -35,7 +36,9 @@
       "privateWorkflows": []
     },
     "processOptions": {
-      "ignoredFiles": []
+      "ignoredFiles": [
+        "GsuiteUse.xaml"
+      ]
     },
     "fileInfoCollection": [],
     "modernBehavior": false
