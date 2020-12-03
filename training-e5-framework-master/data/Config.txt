@@ -1,0 +1,18 @@
+{
+	"Settings": {
+		"Namespace": "E5.Framework"
+	},
+	"Constants": {
+		"MaxRetryCount": "0"
+	},
+	"ReturnCodes": {
+		"GENERIC_ERROR": "E0000 ## Generic Error",
+		"GENERIC_WARNING": "W0000 ## Generic Warning",
+		"INVALID_INPUT_ARGUMENTS": "E0001 ## The input parameters passed are invalid",
+		"ERROR_LOADING_ASSET": "E0002 ## Could not fetch the given asset",
+		"INVALID_WORKFLOW": "E0003 ## The workflow invoked is invalid",
+		"ERROR_CLOSING_THE_BROWSER": "E0004 ## Unable to close the browser",
+		"LOGIN_ATTEMPT_FAILED": "E0005 ## Login attempt failed",
+		"ERROR_WHILE_SETTING_FILTERS": "E0006 ## Error while attempting to set the filter params"
+	}
+}
