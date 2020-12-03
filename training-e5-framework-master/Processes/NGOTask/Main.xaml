@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:nd="clr-namespace:NGOTask.DashBoard;assembly=NGOTask" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:nn="clr-namespace:NGOTask.NGO_Directory;assembly=NGOTask" xmlns:nn1="clr-namespace:NGOTask.NGODetails;assembly=NGOTask" xmlns:ns="clr-namespace:NGOTask.StateWise_Ngo;assembly=NGOTask" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:nd="clr-namespace:NGOTask.DashBoard;assembly=NGOTask" xmlns:ng="clr-namespace:NGOTask.Generic;assembly=NGOTask" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:nn="clr-namespace:NGOTask.NGO_Directory;assembly=NGOTask" xmlns:nn1="clr-namespace:NGOTask.NGODetails;assembly=NGOTask" xmlns:ns="clr-namespace:NGOTask.StateWise_Ngo;assembly=NGOTask" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="FlowConfig" Type="InArgument(njl:JObject)" />
     <x:Property Name="ResOut" Type="OutArgument(x:String)" />
@@ -7,10 +7,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>948,487.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>688.666666666667,487.333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="84">
+    <scg:List x:TypeArguments="x:String" Capacity="44">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -58,7 +58,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="50">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -103,7 +103,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <TryCatch DisplayName="NGO Task  - Try Catch" sap:VirtualizedContainerService.HintSize="438.666666666667,330.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
-        <Sequence DisplayName="NGo Task - Process" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="NGo Task - Process" sap:VirtualizedContainerService.HintSize="454.666666666667,2219.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Default="NGO's (State-wise)" Name="SubTabName" />
             <Variable x:TypeArguments="s:String[]" Name="States" />
@@ -120,6 +120,12 @@
             <Variable x:TypeArguments="ss:SecureString" Name="MailPassword" />
             <Variable x:TypeArguments="x:String" Name="MailUserName" />
             <Variable x:TypeArguments="x:String" Name="EmailPasswordString" />
+            <Variable x:TypeArguments="ui:Browser" Name="NGOBrowserTab" />
+            <Variable x:TypeArguments="x:String" Name="URL">
+              <Variable.Default>
+                <Literal x:TypeArguments="x:String">https://ngodarpan.gov.in/index.php/home/</Literal>
+              </Variable.Default>
+            </Variable>
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -127,6 +133,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+          <ng:Launch_NGO DisplayName="Launch NGO" sap:VirtualizedContainerService.HintSize="412.666666666667,22" sap2010:WorkflowViewState.IdRef="Launch_NGO_1" NGOBrowserTab="[NGOBrowserTab]" Url="[URL]" />
           <nd:NavigateTab sap2010:Annotation.AnnotationText="Navigate StateWiese" sap:VirtualizedContainerService.HintSize="412.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="NavigateTab_1" NGOBrowserTab="[NGOBrowserTab]" SubTabName="[SubTabName]" TabName="[TabName]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">

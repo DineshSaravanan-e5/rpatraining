@@ -36,7 +36,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>948,3447.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>688.666666666667,3447.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -155,7 +155,7 @@
                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[String.IsNullOrWhiteSpace(ProcessName) Or&#xD;&#xA;String.IsNullOrWhiteSpace(TaskName) Or&#xD;&#xA;String.IsNullOrWhiteSpace(ExceptionGmailAccountCredentialAsset) Or&#xD;&#xA;ExceptionEmailRecipients.Length = 0 Or&#xD;&#xA;String.IsNullOrWhiteSpace(NotificationGmailAcccountCredentialAsset) Or&#xD;&#xA;NotificationEmailRecipients.Length = 0 Or&#xD;&#xA;String.IsNullOrWhiteSpace(CredentialAsset)]" DisplayName="Validate input arguments" sap:VirtualizedContainerService.HintSize="510,229.333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[String.IsNullOrWhiteSpace(ProcessName) Or&#xA;String.IsNullOrWhiteSpace(TaskName) Or&#xA;String.IsNullOrWhiteSpace(ExceptionGmailAccountCredentialAsset) Or&#xA;ExceptionEmailRecipients.Length = 0 Or&#xA;String.IsNullOrWhiteSpace(NotificationGmailAcccountCredentialAsset) Or&#xA;NotificationEmailRecipients.Length = 0 Or&#xA;String.IsNullOrWhiteSpace(CredentialAsset)]" DisplayName="Validate input arguments" sap:VirtualizedContainerService.HintSize="510,229.333333333333" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -292,7 +292,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Send Mails" sap:VirtualizedContainerService.HintSize="480.666666666667,637.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <Sequence DisplayName="Send Mails" sap:VirtualizedContainerService.HintSize="526,637.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="GmailPasswordString" />
             </Sequence.Variables>
@@ -314,7 +314,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <If Condition="[IsHappyPath]" sap:VirtualizedContainerService.HintSize="484,223.333333333333" sap2010:WorkflowViewState.IdRef="If_3">
+                <If Condition="[IsHappyPath]" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="If_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>

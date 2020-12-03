@@ -4,8 +4,10 @@
   "main": "Main.xaml",
   "dependencies": {
     "Alphabet.Workflow.Activities": "[2.3.0]",
+    "CovidTask": "[1.0.3]",
     "GetterSetter.Activities": "[1.0.4]",
     "NGOTask": "[1.0.6]",
+    "Training.ACME": "[1.0.2]",
     "UiPath.Mail.Activities": "[1.9.3]",
     "UiPath.System.Activities": "[20.10.1]",
     "UiPath.UIAutomation.Activities": "[20.10.6]",
