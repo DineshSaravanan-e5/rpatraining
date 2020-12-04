@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>948,278</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>948,468</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PdfFileService_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
@@ -118,9 +118,9 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID13</x:Reference>
+      <x:Reference>__ReferenceID14</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID13">
+    <FlowStep x:Name="__ReferenceID14">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,94.02</av:Point>
@@ -235,7 +235,7 @@
                               <av:PointCollection x:Key="ConnectorLocation">290,691.666666666667 290,713.666666666667</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Login the BP Site" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe BP'" sap:VirtualizedContainerService.HintSize="434,246" sap2010:WorkflowViewState.IdRef="BrowserScope_9" InformativeScreenshot="6dfdbbeb6e81105aa6d8468d6ca6319a" Selector="&lt;html app='chrome.exe' title='BP Travel - Log In' /&gt;">
+                          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Login the BP Site" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe BP'" sap:VirtualizedContainerService.HintSize="200,83.3333333333333" sap2010:WorkflowViewState.IdRef="BrowserScope_9" InformativeScreenshot="6dfdbbeb6e81105aa6d8468d6ca6319a" Selector="&lt;html app='chrome.exe' title='BP Travel - Log In' /&gt;">
                             <ui:BrowserScope.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
@@ -336,33 +336,33 @@
                                       <av:PointCollection x:Key="ConnectorLocation">290,897.333333333333 290,927.333333333333 280,927.333333333333 280,973.666666666667</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Search and read The Each Detail and Stored  in data Table" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe BP'" sap:VirtualizedContainerService.HintSize="434,246" sap2010:WorkflowViewState.IdRef="BrowserScope_10" InformativeScreenshot="e67960b5b5b83ee5ac4e4b196bd3080b" Selector="&lt;html app='chrome.exe' title='BP Travel - Search' /&gt;">
+                                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Search and read The Each Detail and Stored  in data Table" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe BP'" sap:VirtualizedContainerService.HintSize="200,114.666666666667" sap2010:WorkflowViewState.IdRef="BrowserScope_10" InformativeScreenshot="e67960b5b5b83ee5ac4e4b196bd3080b" Selector="&lt;html app='chrome.exe' title='BP Travel - Search' /&gt;">
                                     <ui:BrowserScope.Body>
                                       <ActivityAction x:TypeArguments="x:Object">
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,190" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <TryCatch sap2010:Annotation.AnnotationText="Not Found Error Handle using Try Catch" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438.666666666667,328.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                          <TryCatch sap2010:Annotation.AnnotationText="Not Found Error Handle using Try Catch" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,98" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <TryCatch.Try>
-                                              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[BPTravelQuoteNumber]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="304.666666666667,222" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                                              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[BPTravelQuoteNumber]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                                                 <ui:ForEachRow.Body>
                                                   <ActivityAction x:TypeArguments="sd:DataRow">
                                                     <ActivityAction.Argument>
                                                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                                                     </ActivityAction.Argument>
-                                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="756,2525.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                                       <Sequence.Variables>
                                                         <Variable x:TypeArguments="x:Boolean" Name="BoolResult" />
                                                       </Sequence.Variables>
@@ -371,7 +371,7 @@
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  searchFor'" sap:VirtualizedContainerService.HintSize="714,134" sap2010:WorkflowViewState.IdRef="TypeInto_11" SimulateType="True" Text="[row(&quot;Quote Reference Number&quot;).ToString]">
+                                                      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  searchFor'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_11" SimulateType="True" Text="[row(&quot;Quote Reference Number&quot;).ToString]">
                                                         <ui:TypeInto.Target>
                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="04edb7f9-f4c6-46d6-84e5-90ff2060baf7" InformativeScreenshot="5cd3620fbc08d724c1e7c1aa2321d79b" Selector="&lt;webctrl id='searchFor' tag='INPUT' /&gt;">
                                                             <ui:Target.TimeoutMS>
@@ -388,7 +388,7 @@
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                       </ui:TypeInto>
-                                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="714,52.6666666666667" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                         <ui:Click.CursorPosition>
                                                           <ui:CursorPosition Position="Center">
                                                             <ui:CursorPosition.OffsetX>
@@ -410,7 +410,7 @@
                                                           </ui:Target>
                                                         </ui:Click.Target>
                                                       </ui:Click>
-                                                      <ui:UiElementExists DisplayName="Element Exists 'TD'" Exists="[BoolResult]" sap:VirtualizedContainerService.HintSize="714,52.6666666666667" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                                                      <ui:UiElementExists DisplayName="Element Exists 'TD'" Exists="[BoolResult]" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                                                         <ui:UiElementExists.Target>
                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3e7a90cf-feb9-47fa-87f4-de92342d8215" InformativeScreenshot="4e02774b2e46797b81e02928d6d22c44" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableCol='1' tag='TD' /&gt;">
                                                             <ui:Target.TimeoutMS>
@@ -422,7 +422,7 @@
                                                           </ui:Target>
                                                         </ui:UiElementExists.Target>
                                                       </ui:UiElementExists>
-                                                      <If Condition="[BoolResult]" sap:VirtualizedContainerService.HintSize="714,260" sap2010:WorkflowViewState.IdRef="If_1">
+                                                      <If Condition="[BoolResult]" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="If_1">
                                                         <If.Then>
                                                           <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                             <ui:Click.CursorPosition>
@@ -451,7 +451,7 @@
                                                           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Not Found&quot;]" />
                                                         </If.Else>
                                                       </If>
-                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  from'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="GetValue_25">
+                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  from'" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetValue_25">
                                                         <ui:GetValue.Target>
                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="24d778e1-7fb5-459b-b79f-d939dafdfe17" InformativeScreenshot="b0ec0dd0596c2f0dfceed3f0b147588d" Selector="&lt;webctrl id='from' tag='DIV' /&gt;">
                                                             <ui:Target.TimeoutMS>
@@ -466,7 +466,7 @@
                                                           <OutArgument x:TypeArguments="x:String">[From]</OutArgument>
                                                         </ui:GetValue.Value>
                                                       </ui:GetValue>
-                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  to'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="GetValue_26">
+                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  to'" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetValue_26">
                                                         <ui:GetValue.Target>
                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce1b3d73-cf1e-45da-93c0-9adffa13f17c" InformativeScreenshot="098edb6eb57eb7609305b0e91b24dece" Selector="&lt;webctrl id='to' tag='DIV' /&gt;">
                                                             <ui:Target.TimeoutMS>
@@ -481,7 +481,7 @@
                                                           <OutArgument x:TypeArguments="x:String">[ToDetail]</OutArgument>
                                                         </ui:GetValue.Value>
                                                       </ui:GetValue>
-                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  departing'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="GetValue_27">
+                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  departing'" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetValue_27">
                                                         <ui:GetValue.Target>
                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b257d3bc-bc58-497d-b2e7-2ceba34240b4" InformativeScreenshot="a00bb5b49118cf422b67cb0a373393b6" Selector="&lt;webctrl id='departing' tag='DIV' /&gt;">
                                                             <ui:Target.TimeoutMS>
@@ -496,7 +496,7 @@
                                                           <OutArgument x:TypeArguments="x:String">[Departing]</OutArgument>
                                                         </ui:GetValue.Value>
                                                       </ui:GetValue>
-                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  returning'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="GetValue_28">
+                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  returning'" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetValue_28">
                                                         <ui:GetValue.Target>
                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="acb7d117-458d-4a06-82ce-0b6855499fa9" InformativeScreenshot="b451b66476dbaa42101cecfd03fc5404" Selector="&lt;webctrl id='returning' tag='DIV' /&gt;">
                                                             <ui:Target.TimeoutMS>
@@ -511,7 +511,7 @@
                                                           <OutArgument x:TypeArguments="x:String">[Returning]</OutArgument>
                                                         </ui:GetValue.Value>
                                                       </ui:GetValue>
-                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  adults'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="GetValue_29">
+                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  adults'" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetValue_29">
                                                         <ui:GetValue.Target>
                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c6d2c9ed-8fd4-4711-8a1a-ce316a34e935" InformativeScreenshot="52614fe86c7282434b1285949ec979fd" Selector="&lt;webctrl id='adults' tag='DIV' /&gt;">
                                                             <ui:Target.TimeoutMS>
@@ -526,7 +526,7 @@
                                                           <OutArgument x:TypeArguments="x:Int32">[NumberOfAdults]</OutArgument>
                                                         </ui:GetValue.Value>
                                                       </ui:GetValue>
-                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  children'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="GetValue_30">
+                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  children'" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetValue_30">
                                                         <ui:GetValue.Target>
                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b6de4a90-e491-4526-a7e6-7369e5ff2580" InformativeScreenshot="4976a81cfc545baf7efe958ff13798e3" Selector="&lt;webctrl id='children' tag='DIV' /&gt;">
                                                             <ui:Target.TimeoutMS>
@@ -541,7 +541,7 @@
                                                           <OutArgument x:TypeArguments="x:Int32">[NumberOfChildrens]</OutArgument>
                                                         </ui:GetValue.Value>
                                                       </ui:GetValue>
-                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  price'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="GetValue_31">
+                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  price'" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetValue_31">
                                                         <ui:GetValue.Target>
                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f293a6de-64df-4bee-9bb6-7bd62a2d70f1" InformativeScreenshot="3d0b578350935995e0cc85d2f6f8db63" Selector="&lt;webctrl id='price' tag='DIV' /&gt;">
                                                             <ui:Target.TimeoutMS>
@@ -556,7 +556,7 @@
                                                           <OutArgument x:TypeArguments="x:Double">[Price]</OutArgument>
                                                         </ui:GetValue.Value>
                                                       </ui:GetValue>
-                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  name'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="GetValue_32">
+                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  name'" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetValue_32">
                                                         <ui:GetValue.Target>
                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="00462ad4-4c2c-4f84-a75b-3bbd5431a135" InformativeScreenshot="0311f4f84c68a627a796d35fb603e7b1" Selector="&lt;webctrl id='name' tag='DIV' /&gt;">
                                                             <ui:Target.TimeoutMS>
@@ -571,7 +571,7 @@
                                                           <OutArgument x:TypeArguments="x:String">[Name]</OutArgument>
                                                         </ui:GetValue.Value>
                                                       </ui:GetValue>
-                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  postcode'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="GetValue_33">
+                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  postcode'" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetValue_33">
                                                         <ui:GetValue.Target>
                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a00b7047-0e13-42a9-bf91-7a14c3706426" InformativeScreenshot="bed2e3aa5666700432525dc8d22025cc" Selector="&lt;webctrl id='postcode' tag='DIV' /&gt;">
                                                             <ui:Target.TimeoutMS>
@@ -586,7 +586,7 @@
                                                           <OutArgument x:TypeArguments="x:String">[PostCode]</OutArgument>
                                                         </ui:GetValue.Value>
                                                       </ui:GetValue>
-                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  telephone'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="GetValue_34">
+                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  telephone'" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetValue_34">
                                                         <ui:GetValue.Target>
                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9131b554-9d69-420d-8a5a-68b6a2fdcd20" InformativeScreenshot="6ce1575ae52476adf56e03834470a56e" Selector="&lt;webctrl id='telephone' tag='DIV' /&gt;">
                                                             <ui:Target.TimeoutMS>
@@ -601,7 +601,7 @@
                                                           <OutArgument x:TypeArguments="x:String">[PhoneNumber]</OutArgument>
                                                         </ui:GetValue.Value>
                                                       </ui:GetValue>
-                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  email'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="GetValue_35">
+                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  email'" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetValue_35">
                                                         <ui:GetValue.Target>
                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="418f6337-7ad8-4504-bebb-ef47a5556445" InformativeScreenshot="f5ffbab4ae01136ec77b4100d0841b97" Selector="&lt;webctrl id='email' tag='DIV' /&gt;">
                                                             <ui:Target.TimeoutMS>
@@ -616,8 +616,8 @@
                                                           <OutArgument x:TypeArguments="x:String">[Email]</OutArgument>
                                                         </ui:GetValue.Value>
                                                       </ui:GetValue>
-                                                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{From,ToDetail,Departing,Returning,NumberOfAdults,NumberOfChildrens,Price,Name,PostCode,PhoneNumber,Email}]" DataTable="[BPDetailsDataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="714,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-                                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  search.html'" sap:VirtualizedContainerService.HintSize="714,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{From,ToDetail,Departing,Returning,NumberOfAdults,NumberOfChildrens,Price,Name,PostCode,PhoneNumber,Email}]" DataTable="[BPDetailsDataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  search.html'" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                         <ui:Click.CursorPosition>
                                                           <ui:CursorPosition Position="Center">
                                                             <ui:CursorPosition.OffsetX>
@@ -749,7 +749,7 @@
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <av:Point x:Key="ShapeLocation">180,1353.66666666667</av:Point>
                                                           <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
-                                                          <av:PointCollection x:Key="ConnectorLocation">280,1406.33333333333 280,1429</av:PointCollection>
+                                                          <av:PointCollection x:Key="ConnectorLocation">280,1406.33333333334 270,1406.33333333334 270,1431</av:PointCollection>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
                                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Delete Downloaded Attachement&quot;]">
@@ -760,20 +760,46 @@
                                                         </sap:WorkflowViewStateService.ViewState>
                                                       </ui:LogMessage>
                                                       <FlowStep.Next>
-                                                        <FlowStep x:Name="__ReferenceID6">
+                                                        <FlowStep x:Name="__ReferenceID13">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <av:Point x:Key="ShapeLocation">180,1429</av:Point>
-                                                              <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                                              <av:Point x:Key="ShapeLocation">170,1431</av:Point>
+                                                              <av:Size x:Key="ShapeSize">200,98</av:Size>
+                                                              <av:PointCollection x:Key="ConnectorLocation">270,1529 270,1549</av:PointCollection>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <ui:Delete ContinueOnError="{x:Null}" DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[ResultAttachment(0)]">
+                                                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Send mai to the  user The Fils is not supported " Body="[Mail.Body]" DisplayName="Send SMTP Mail Message" Email="[UserEmail]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,180" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[UserPassword.ToString]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Result Attachment File" To="dk17307307@gmail.com">
+                                                            <ui:SendMail.Files>
+                                                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                                                <InArgument x:TypeArguments="x:String">
+                                                                  <Literal x:TypeArguments="x:String">C:\Users\Dinesh\Documents\UiPath\rpa\ReadMailAttachment\Result.xlsx</Literal>
+                                                                </InArgument>
+                                                              </scg:List>
+                                                            </ui:SendMail.Files>
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                          </ui:Delete>
+                                                          </ui:SendMail>
+                                                          <FlowStep.Next>
+                                                            <FlowStep x:Name="__ReferenceID6">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <av:Point x:Key="ShapeLocation">170,1549</av:Point>
+                                                                  <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <ui:Delete ContinueOnError="{x:Null}" DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[ResultAttachment(0)]">
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </ui:Delete>
+                                                            </FlowStep>
+                                                          </FlowStep.Next>
                                                         </FlowStep>
                                                       </FlowStep.Next>
                                                     </FlowStep>
@@ -814,5 +840,6 @@
     <x:Reference>__ReferenceID10</x:Reference>
     <x:Reference>__ReferenceID11</x:Reference>
     <x:Reference>__ReferenceID12</x:Reference>
+    <x:Reference>__ReferenceID13</x:Reference>
   </Flowchart>
 </Activity>
