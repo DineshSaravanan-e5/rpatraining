@@ -31,7 +31,11 @@
     "outputType": "Library",
     "libraryOptions": {
       "includeOriginalXaml": false,
-      "privateWorkflows": []
+      "privateWorkflows": [
+        "FilterSelectModules/MultipleSelect.xaml",
+        "FilterSelectModules/Search and Select.xaml",
+        "FilterSelectModules/SingleSelect.xaml"
+      ]
     },
     "processOptions": {
       "ignoredFiles": []

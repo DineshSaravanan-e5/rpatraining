@@ -184,13 +184,13 @@
                     </If>
                   </Sequence>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="559.333333333333,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Check the element is exist then click&quot;]" />
-                  <Sequence DisplayName="Check the Element Exist and Click" sap:VirtualizedContainerService.HintSize="559.333333333333,1304" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence DisplayName="Check the Element Exist and Click" sap:VirtualizedContainerService.HintSize="559.333333333333,1307.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterate Each input ,Check the Element is found then click" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="517.333333333333,1212" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Inputs]">
+                    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterate Each input ,Check the Element is found then click" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="517.333333333333,1215.33333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Inputs]">
                       <ui:ForEach.Body>
                         <ActivityAction x:TypeArguments="x:String">
                           <ActivityAction.Argument>

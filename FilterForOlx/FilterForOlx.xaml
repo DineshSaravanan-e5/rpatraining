@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="FilterForOlx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="FilterForOlx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Olx site Browser  Tab as Input" Name="OlxBrowserTab" Type="InArgument(ui:Browser)">
       <x:Property.Attributes>
@@ -24,10 +24,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>847.333333333333,1713.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>948,1872</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FilterForOlx_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="26">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -54,10 +54,10 @@
       <x:String>System.Activities.DynamicUpdate</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Reflection</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="26">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -84,9 +84,9 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This module is Select the Type of Filter To filter multiple selection." DisplayName="FilterForOlx" sap:VirtualizedContainerService.HintSize="703.333333333333,1648.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This module is Select the Type of Filter To filter multiple selection." DisplayName="FilterForOlx" sap:VirtualizedContainerService.HintSize="703.333333333333,1807.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -95,23 +95,23 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="661.333333333333,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Filter for olx is Started&quot;]" />
-    <TryCatch DisplayName="Filter for Try Catch" sap:VirtualizedContainerService.HintSize="661.333333333333,1256.66666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Filter for Try Catch" sap:VirtualizedContainerService.HintSize="661.333333333333,1415.33333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Olx Filter - process" sap:VirtualizedContainerService.HintSize="622.666666666667,995.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Olx Filter - process" sap:VirtualizedContainerService.HintSize="622.666666666667,1154" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="580.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Input Validation&quot;]" />
-          <Sequence DisplayName="Input Validation" sap:VirtualizedContainerService.HintSize="580.666666666667,768.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Input Validation" sap:VirtualizedContainerService.HintSize="580.666666666667,927.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="538.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Check the input  is valid or not&quot;]" />
-            <If Condition="[String.IsNullOrEmpty(FilterType) or String.IsNullOrEmpty(SelectType) or inputs.length =0]" DisplayName="Check the input valid or not" sap:VirtualizedContainerService.HintSize="756,402" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[String.IsNullOrEmpty(FilterType) or String.IsNullOrEmpty(SelectType) or inputs.length =0]" DisplayName="Check the input valid or not" sap:VirtualizedContainerService.HintSize="538.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -133,45 +133,63 @@
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Valid input&quot;]" />
               </If.Else>
             </If>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="538.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Filter type is select From Switc case&quot;]" />
-            <Sequence sap2010:Annotation.AnnotationText="Pass the Select type in Switch Case." DisplayName="Filter Type  - process" sap:VirtualizedContainerService.HintSize="538.666666666667,314.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="538.666666666667,93.3333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Filter type is select From Switc case&quot;]" />
+            <Sequence sap2010:Annotation.AnnotationText="Pass the Select type in Switch Case." DisplayName="Filter Type  - process" sap:VirtualizedContainerService.HintSize="538.666666666667,474.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[SelectType]" sap:VirtualizedContainerService.HintSize="496.666666666667,192" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+              <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[SelectType]" sap:VirtualizedContainerService.HintSize="496.666666666667,352" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                 <Switch.Default>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,248.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence DisplayName="NotValidType" sap:VirtualizedContainerService.HintSize="376,247.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Error" Message="[&quot;Not Valid Filter Type &quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93.3333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Error" Message="[&quot;Not Valid Filter Type &quot;]" />
                     <Throw Exception="[new BusinessRuleException(&quot;WH034&quot;)]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
                   </Sequence>
                 </Switch.Default>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="SingleSelect" DisplayName="Invoke SingleSelect workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SingleSelect.xaml">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="SingleSelect" DisplayName="Invoke SingleSelect workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="FilterSelectModules\SingleSelect.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="ui:Browser" x:Key="OlxBrowserTab">[OlxBrowserTab]</InArgument>
-                    <InArgument x:TypeArguments="s:String[]" x:Key="Inputs">[Inputs]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="FilterHeader">[FilterType]</InArgument>
+                    <InArgument x:TypeArguments="ui:Browser" x:Key="OlxBrowserTab">
+                      <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="OlxBrowserTab" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="s:String[]" x:Key="Inputs">
+                      <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="Inputs" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="FilterHeader">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FilterType" />
+                    </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="MultiSelect" DisplayName="Invoke MultipleSelect workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="MultipleSelect.xaml">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="MultiSelect" DisplayName="Invoke MultipleSelect workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="FilterSelectModules\MultipleSelect.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="ui:Browser" x:Key="OlxBrowserTab">[OlxBrowserTab]</InArgument>
-                    <InArgument x:TypeArguments="s:String[]" x:Key="Inputs">[Inputs]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="FilterHeader">[FilterType]</InArgument>
+                    <InArgument x:TypeArguments="ui:Browser" x:Key="OlxBrowserTab">
+                      <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="OlxBrowserTab" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="s:String[]" x:Key="Inputs">
+                      <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="Inputs" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="FilterHeader">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FilterType" />
+                    </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="SearchSelect" DisplayName="Invoke Search and Select workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Search and Select.xaml">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="SearchSelect" DisplayName="Invoke Search and Select workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="FilterSelectModules\Search and Select.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="ui:Browser" x:Key="OlxBrowserTab">[OlxBrowserTab]</InArgument>
-                    <InArgument x:TypeArguments="s:String[]" x:Key="Inputs">[Inputs]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="FilterHeader">[FilterType]</InArgument>
+                    <InArgument x:TypeArguments="ui:Browser" x:Key="OlxBrowserTab">
+                      <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="OlxBrowserTab" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="s:String[]" x:Key="Inputs">
+                      <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="Inputs" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="FilterHeader">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FilterType" />
+                    </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </Switch>

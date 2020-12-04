@@ -60,7 +60,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Used'" sap:VirtualizedContainerService.HintSize="434,230.666666666667" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="eb9ed21d9895d7d248135bf4d97d6a89" Selector="&lt;html app='chrome.exe' title='Used Cars for sale in India, Second Hand Cars in India | OLX' /&gt;" UiBrowser="[OlxBrowserTab]">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Used'" sap:VirtualizedContainerService.HintSize="434,230.666666666667" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="162401314283a97d74a0a7b61d8607e9" Selector="&lt;html app='chrome.exe' title='Used Cars for sale in Andhra Pradesh, Second Hand Cars in Andhra Pradesh | OLX' /&gt;" UiBrowser="[OlxBrowserTab]">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -78,18 +78,10 @@
     </ui:BrowserScope>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke FilterForOlx workflow" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="FilterForOlx.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="ui:Browser" x:Key="OlxBrowserTab">
-          <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="OlxBrowserTab" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="FilterType">
-          <Literal x:TypeArguments="x:String">No. of Owners</Literal>
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="SelectType">
-          <Literal x:TypeArguments="x:String">MultiSelect</Literal>
-        </InArgument>
-        <InArgument x:TypeArguments="s:String[]" x:Key="Inputs">
-          <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;1st&quot;,&quot;2nd&quot;,&quot;3rd&quot;}" />
-        </InArgument>
+        <InArgument x:TypeArguments="ui:Browser" x:Key="OlxBrowserTab">[OlxBrowserTab]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="FilterType">No. of Owners</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="SelectType">MultiSelect</InArgument>
+        <InArgument x:TypeArguments="s:String[]" x:Key="Inputs">[{"1st","2nd","3rd"}]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
