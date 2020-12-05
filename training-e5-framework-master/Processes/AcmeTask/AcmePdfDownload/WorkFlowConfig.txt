@@ -1,0 +1,8 @@
+{
+"WorkFlowToExecute":"Acme",
+"NavigateTabName" : "Work Items",
+"ResTableTextFilePath":"ResultTable.txt",
+"Url" :"https://acme-test.uipath.com/login"
+
+
+}

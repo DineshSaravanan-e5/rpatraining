@@ -1,4 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="688.666666666667,900.666666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:CovidTask;assembly=CovidTask" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:CovidTask;assembly=CovidTask" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="FlowConfig" Type="InArgument(njl:JObject)" />
+    <x:Property Name="ResOut" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>948,1267.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="43">
       <x:String>System.Activities</x:String>
@@ -47,7 +56,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -83,62 +92,101 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="304,836" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="376,902.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="WHOBrowserTab" />
-      <Variable x:TypeArguments="x:String" Default="https://covid19.who.int/" Name="Url" />
-      <Variable x:TypeArguments="x:String" Default="Explore" Name="TabName" />
-      <Variable x:TypeArguments="x:String" Default="Explore the Data" Name="SubTabName" />
+      <Variable x:TypeArguments="x:String" Name="Url">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">https://covid19.who.int/</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="TabName">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Explore</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="SubTabName">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Explore the Data</Literal>
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="ui:Browser" Name="CovidBrowserTab" />
-      <Variable x:TypeArguments="x:String" Default="Global Overview" Name="CovidTabName" />
-      <Variable x:TypeArguments="x:String" Default="Cases and Deaths" Name="CovidSubTabName" />
+      <Variable x:TypeArguments="x:String" Name="CovidTabName">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Global Overview</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="CovidSubTabName">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Cases and Deaths</Literal>
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="sd:DataTable" Name="ResDataTable" />
       <Variable x:TypeArguments="sd:DataTable" Name="PopulationTable" />
-      <Variable x:TypeArguments="x:String" Name="WoldoMeterUrl">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">https://www.worldometers.info/geography/7-continents/</Literal>
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:String" Name="WorldometerMainUrl">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">https://www.worldometers.info/coronavirus/?</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="https://www.worldometers.info/geography/7-continents/" Name="WoldoMeterUrl" />
+      <Variable x:TypeArguments="x:String" Default="https://www.worldometers.info/coronavirus/?" Name="WorldometerMainUrl" />
       <Variable x:TypeArguments="ss:SecureString" Name="UserMailPassword" />
       <Variable x:TypeArguments="x:String" Name="Mail" />
       <Variable x:TypeArguments="x:String" Name="UserMailAddress" />
       <Variable x:TypeArguments="x:String" Name="UserMailPasswordString" />
-      <Variable x:TypeArguments="x:String" Name="ReciverMailAddress">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">dinesh.saravanan@e5.ai</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="dinesh.saravanan@e5.ai" Name="ReciverMailAddress" />
+      <Variable x:TypeArguments="x:String" Default="ResTable.txt" Name="ResTableTextFilePath" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <c:Launch_WHO_Covid_Website DisplayName="Launch WHO Covid Website" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Launch_WHO_Covid_Website_2" WHOBrowserTab="[WHOBrowserTab]" WHOCovidWebsiteURL="[Url]" />
-    <c:WHOInitialTab sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="WHOInitialTab_2" InitialTabName="[TabName]" WHOBrowserTab="[WHOBrowserTab]" />
-    <c:ExploreSubTab ExploreTabName="[SubTabName]" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="ExploreSubTab_2" WHOBroweserTab="[WHOBrowserTab]" />
-    <c:Covid19Exlorer Covid19Tab="[CovidBrowserTab]" ExplorerTabName="[CovidTabName]" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Covid19Exlorer_2" />
-    <c:GlobalOverViewSubTab Covid19Tab="[CovidBrowserTab]" GlobalSubTab="[CovidSubTabName]" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="GlobalOverViewSubTab_2" />
-    <c:ClickRenderTable Covid19Tab="[CovidBrowserTab]" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="ClickRenderTable_1" />
-    <c:ReadCaseAndDeathTable Covid19Tab="[CovidBrowserTab]" ExtractDataTable="[ResDataTable]" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="ReadCaseAndDeathTable_1" />
-    <c:LaunchWordoMeterSite sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="LaunchWordoMeterSite_1" WorldoMeterUrl="[WoldoMeterUrl]" WorldometerPopulationTable="[PopulationTable]" />
-    <c:Calculation sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Calculation_1" WorldometerTable="[PopulationTable]" WorldometerUrl="[WorldometerMainUrl]" />
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="MailLogin" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[UserMailPassword]" Username="[UserMailAddress]" />
-    <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_1">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[UserMailPasswordString]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[new System.Net.NetworkCredential(string.Empty, UserMailPassword).Password]</InArgument>
-      </Assign.Value>
-    </Assign>
-    <c:Mail sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Mail_1" SenderMailAddress="[ReciverMailAddress]" UserMailAddress="[UserMailAddress]" UserPassword="[UserMailPasswordString]" WordloMeterTable="[PopulationTable]" />
+    <c:Launch_WHO_Covid_Website DisplayName="Launch WHO Covid Website" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Launch_WHO_Covid_Website_2" WHOBrowserTab="[WHOBrowserTab]" WHOCovidWebsiteURL="[Url]" />
+    <c:WHOInitialTab sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="WHOInitialTab_2" InitialTabName="[TabName]" WHOBrowserTab="[WHOBrowserTab]" />
+    <c:ExploreSubTab ExploreTabName="[SubTabName]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ExploreSubTab_2" WHOBroweserTab="[WHOBrowserTab]" />
+    <c:Covid19Exlorer Covid19Tab="[CovidBrowserTab]" ExplorerTabName="[CovidTabName]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Covid19Exlorer_2" />
+    <c:GlobalOverViewSubTab Covid19Tab="[CovidBrowserTab]" GlobalSubTab="[CovidSubTabName]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="GlobalOverViewSubTab_2" />
+    <c:ClickRenderTable Covid19Tab="[CovidBrowserTab]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ClickRenderTable_1" />
+    <c:ReadCaseAndDeathTable Covid19Tab="[CovidBrowserTab]" ExtractDataTable="[ResDataTable]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ReadCaseAndDeathTable_1" />
+    <c:LaunchWordoMeterSite sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="LaunchWordoMeterSite_1" WorldoMeterUrl="[WoldoMeterUrl]" WorldometerPopulationTable="[PopulationTable]" />
+    <c:Calculation sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Calculation_1" WorldometerTable="[PopulationTable]" WorldometerUrl="[WorldometerMainUrl]" />
+    <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Itearate the StateDetails&#xA;table and append the row of table to html Row in text " DataTable="[PopulationTable]" DisplayName="iterate table to create table row" sap:VirtualizedContainerService.HintSize="334,114.666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Table iterate - body" sap:VirtualizedContainerService.HintSize="376,227.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:AppendLine DisplayName="Append Line" FileName="[ResTableTextFilePath]" sap:VirtualizedContainerService.HintSize="334,135.333333333333" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[&quot;&lt;tr&gt;&lt;td&gt;&quot;+row(&quot;Continent&quot;).ToString+&quot;&lt;/td&gt;&lt;td&gt;&quot;+row(2).ToString+&quot;&lt;/td&gt;&lt;td&gt;&quot;+row(&quot;ContinentDeathPercentage&quot;).ToString+&quot;&lt;/td&gt;&lt;td&gt;&quot;+row(&quot;WorldDeathPercentage&quot;).ToString+&quot;&lt;/td&gt;&lt;/tr&gt;&quot;]" UseDefaultEncoding="False" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEachRow>
+    <ui:ReadTextFile sap2010:Annotation.AnnotationText="read the text File and convet to the the sting" Content="[ResOut]" DisplayName="Read Text File" FileName="[ResTableTextFilePath]" sap:VirtualizedContainerService.HintSize="334,98" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ReadTextFile>
   </Sequence>
 </Activity>

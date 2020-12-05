@@ -1,4 +1,0 @@
-{
-"WorkFlowToExecute":"NGO",
-"States" : ["DAMAN & DIU","LAKSHADWEEP"]
-}

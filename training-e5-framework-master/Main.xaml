@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.ProcessName="NGO" this:Main.TaskName="NGOTask" this:Main.ExceptionGmailAccountCredentialAsset="MailLogin" this:Main.NotificationGmailAcccountCredentialAsset="MailLogin" this:Main.NotificationEmailRecipients="[{&quot;dinesh.saravanan@e5.ai&quot;}]" this:Main.ExceptionEmailRecipients="[{&quot;dinesh.saravanan@e5.ai&quot;}]" this:Main.URL="https://ngodarpan.gov.in/index.php/home/" this:Main.CredentialAsset="Login Acme" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ae="clr-namespace:Alphabet.Exception;assembly=GetXamlFileNameActivity" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.ProcessName="Covid" this:Main.TaskName="Coivd" this:Main.ExceptionGmailAccountCredentialAsset="MailLogin" this:Main.NotificationGmailAcccountCredentialAsset="MailLogin" this:Main.NotificationEmailRecipients="[{&quot;dinesh.saravanan@e5.ai&quot;}]" this:Main.ExceptionEmailRecipients="[{&quot;dinesh.saravanan@e5.ai&quot;}]" this:Main.URL="https://ngodarpan.gov.in/index.php/home/" this:Main.CredentialAsset="Login Acme" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ae="clr-namespace:Alphabet.Exception;assembly=GetXamlFileNameActivity" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="ProcessName" Type="InArgument(x:String)">
       <x:Property.Attributes>
@@ -32,11 +32,13 @@
     </x:Property>
     <x:Property Name="URL" Type="InArgument(x:String)" />
     <x:Property Name="CredentialAsset" Type="InArgument(x:String)" />
+    <x:Property Name="BrowserTab" Type="OutArgument(ui:Browser)" />
+    <x:Property Name="ResOut" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>688.666666666667,3447.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1075.33333333333,4504</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -110,30 +112,33 @@
   <sap:WorkflowViewStateService.ViewState>
     <scg:Dictionary x:TypeArguments="x:String, x:Object">
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="648.666666666667,3382.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1085.33333333333,4439.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <Sequence.Variables>
-      <Variable x:TypeArguments="ui:Browser" Name="BrowserTab" />
       <Variable x:TypeArguments="x:String" Name="GlobalExceptionMessage" />
       <Variable x:TypeArguments="x:String" Default="ResultRecords" Modifiers="ReadOnly" Name="RESULT_RECORDS" />
       <Variable x:TypeArguments="x:String" Default="SummaryInfo" Modifiers="ReadOnly" Name="SUMMARY_INFO" />
       <Variable x:TypeArguments="s:Exception" Name="GlobalException" />
       <Variable x:TypeArguments="x:Boolean" Default="True" Name="IsHappyPath" />
-      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="WF1 or WF2 or WF3 or WF4" Name="WorkFlowToExecute" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="WF1 or WF2 or WF3 or WF4" Name="WorkFlowToExecute">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Acme</Literal>
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Name="ClientName" />
       <Variable x:TypeArguments="njl:JObject" Name="FlowConfig" />
       <Variable x:TypeArguments="x:String" Default="SummaryResult" Name="SUMMARY_RESULT" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="SummaryFieldNames" />
       <Variable x:TypeArguments="x:String" Name="DeepLink" />
-      <Variable x:TypeArguments="x:String" Name="ResOut" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="606.666666666667,3290.66666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1043.33333333333,4347.33333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -141,18 +146,18 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Processing Begins" sap:VirtualizedContainerService.HintSize="418,807.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="Processing Begins" sap:VirtualizedContainerService.HintSize="594,1059.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Validate Input Arguments" sap:VirtualizedContainerService.HintSize="376,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Validate Input Arguments" sap:VirtualizedContainerService.HintSize="552,321.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If Condition="[String.IsNullOrWhiteSpace(ProcessName) Or&#xA;String.IsNullOrWhiteSpace(TaskName) Or&#xA;String.IsNullOrWhiteSpace(ExceptionGmailAccountCredentialAsset) Or&#xA;ExceptionEmailRecipients.Length = 0 Or&#xA;String.IsNullOrWhiteSpace(NotificationGmailAcccountCredentialAsset) Or&#xA;NotificationEmailRecipients.Length = 0 Or&#xA;String.IsNullOrWhiteSpace(CredentialAsset)]" DisplayName="Validate input arguments" sap:VirtualizedContainerService.HintSize="510,229.333333333333" sap2010:WorkflowViewState.IdRef="If_1">
@@ -167,7 +172,7 @@
               </If.Then>
             </If>
           </Sequence>
-          <Sequence DisplayName="Initialize Workflow" sap:VirtualizedContainerService.HintSize="376,360" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Initialize Workflow" sap:VirtualizedContainerService.HintSize="552,360" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -200,7 +205,7 @@
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
-          <Sequence DisplayName="Execute Workflow" sap:VirtualizedContainerService.HintSize="376,206" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Execute Workflow" sap:VirtualizedContainerService.HintSize="552,206" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -209,19 +214,16 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Execute the Process" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InOutArgument x:TypeArguments="ui:Browser" x:Key="BrowserTab">
-                  <mva:VisualBasicReference x:TypeArguments="ui:Browser" ExpressionText="BrowserTab" />
-                </InOutArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="ResOut">
-                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ResOut" />
-                </OutArgument>
+                <OutArgument x:TypeArguments="ui:Browser" x:Key="BrowserTab">[BrowserTab]</OutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="ResOut">[ResOut]</OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="WorkflowToExecute">[WorkFlowToExecute]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="572.666666666667,170.666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1009.33333333333,170.666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -276,7 +278,7 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Final Steps" sap:VirtualizedContainerService.HintSize="568,2052.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <Sequence DisplayName="Final Steps" sap:VirtualizedContainerService.HintSize="1004.66666666667,2857.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <Sequence.Variables>
             <Variable x:TypeArguments="ui:GenericValue" Name="ResultRecords" />
             <Variable x:TypeArguments="x:String" Name="OverallExecutionStatus" />
@@ -292,7 +294,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Send Mails" sap:VirtualizedContainerService.HintSize="526,637.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <Sequence DisplayName="Send Mails" sap:VirtualizedContainerService.HintSize="962.666666666667,1442" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="GmailPasswordString" />
             </Sequence.Variables>
@@ -302,7 +304,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438.666666666667,545.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="920.666666666667,1350" sap2010:WorkflowViewState.IdRef="TryCatch_6">
               <TryCatch.Variables>
                 <Variable x:TypeArguments="x:String" Name="GmailID" />
                 <Variable x:TypeArguments="ss:SecureString" Name="GmailPassword" />
@@ -314,19 +316,19 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <If Condition="[IsHappyPath]" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="If_3">
+                <If Condition="[IsHappyPath]" sap:VirtualizedContainerService.HintSize="882,864.666666666667" sap2010:WorkflowViewState.IdRef="If_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <Sequence DisplayName="Notification Email" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                    <Sequence DisplayName="Notification Email" sap:VirtualizedContainerService.HintSize="418,710.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_17">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Sequence DisplayName="Construct Mail" sap:VirtualizedContainerService.HintSize="376,618.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_19">
@@ -379,7 +381,7 @@
                             <InArgument x:TypeArguments="x:String">[new System.Net.NetworkCredential(string.Empty,GmailPassword ).Password]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Send the result deatils table to User in html table format" Body="[&quot;&lt;table border = 1&gt;&lt;tr&gt;&lt;td&gt;NameOfVo&lt;/td&gt;&lt;td&gt;RegisterDetails&lt;/td&gt;&lt;td&gt;Address&lt;/td&gt;&lt;td&gt;SectorDetails&lt;/td&gt;&lt;td&gt;UniqueID&lt;/td&gt;&lt;/tr&gt;&quot;+ResOut+&quot;&lt;/table&gt;&quot;]" DisplayName="Send SMTP Mail Message" Email="[GmailID]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,194.666666666667" sap2010:WorkflowViewState.IdRef="SendMail_3" IsBodyHtml="True" Password="[GmailPasswordString]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="[EmailSubject]" To="[string.Join(&quot;&quot;,NotificationEmailRecipients)]">
+                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Send the result deatils table to User in html table format" Body="[&quot;&lt;table border = 1&gt;&quot;+ResOut+&quot;&lt;/table&gt;&quot;]" DisplayName="Send SMTP Mail Message" Email="[GmailID]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,194.666666666667" sap2010:WorkflowViewState.IdRef="SendMail_3" IsBodyHtml="True" Password="[GmailPasswordString]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="[EmailSubject]" To="[string.Join(&quot;&quot;,NotificationEmailRecipients)]">
                           <ui:SendMail.Files>
                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
                           </ui:SendMail.Files>
@@ -401,7 +403,7 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Sequence sap:VirtualizedContainerService.HintSize="376,498" sap2010:WorkflowViewState.IdRef="Sequence_18">
@@ -459,7 +461,7 @@
                 </If>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.666666666667,165.333333333333" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="886.666666666667,165.333333333333" sap2010:WorkflowViewState.IdRef="Catch`1_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -476,7 +478,7 @@
               </TryCatch.Catches>
             </TryCatch>
           </Sequence>
-          <Sequence DisplayName="Close all open applications" sap:VirtualizedContainerService.HintSize="526,937.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <Sequence DisplayName="Close all open applications" sap:VirtualizedContainerService.HintSize="962.666666666667,937.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_13">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -527,7 +529,7 @@
               </TryCatch.Catches>
             </TryCatch>
           </Sequence>
-          <Sequence DisplayName="Throw Exception" sap:VirtualizedContainerService.HintSize="526,306" sap2010:WorkflowViewState.IdRef="Sequence_22">
+          <Sequence DisplayName="Throw Exception" sap:VirtualizedContainerService.HintSize="962.666666666667,306" sap2010:WorkflowViewState.IdRef="Sequence_22">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>

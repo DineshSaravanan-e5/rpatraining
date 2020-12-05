@@ -1,19 +1,20 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="ProcessTransaction" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ae="clr-namespace:Alphabet.Exception;assembly=GetXamlFileNameActivity" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="BrowserTab" Type="InOutArgument(ui:Browser)">
+    <x:Property Name="BrowserTab" Type="OutArgument(ui:Browser)">
       <x:Property.Attributes>
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
     </x:Property>
     <x:Property Name="ResOut" Type="OutArgument(x:String)" />
+    <x:Property Name="WorkflowToExecute" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>688.666666666667,1804.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>588,2978</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="31">
+    <scg:List x:TypeArguments="x:String" Capacity="62">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -45,10 +46,12 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Collections.Specialized</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="58">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -88,12 +91,12 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Description: In this file all other process specific files will be invoked.  &#xA;If there are many decisions, a Flowchart should be used instead." DisplayName="Process" sap:VirtualizedContainerService.HintSize="594,1700" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: In this file all other process specific files will be invoked.  &#xA;If there are many decisions, a Flowchart should be used instead." DisplayName="Process" sap:VirtualizedContainerService.HintSize="594,2913.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="WorkflowToExecute" />
       <Variable x:TypeArguments="njl:JObject" Name="FlowConfig" />
       <Variable x:TypeArguments="x:String" Name="ConfigText" />
       <Variable x:TypeArguments="njl:JObject" Name="WorkFlowConfig" />
+      <Variable x:TypeArguments="x:String" Name="PathOfConfig" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -101,6 +104,51 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[WorkflowToExecute]" sap:VirtualizedContainerService.HintSize="552,990" sap2010:WorkflowViewState.IdRef="Switch`1_5">
+      <Switch.Default>
+        <Sequence sap:VirtualizedContainerService.HintSize="406,298.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="364,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Invalid WorkFlow Name&quot;]" />
+          <ae:ThrowBusinessRuleException DisplayName="Throw business rule exception" sap:VirtualizedContainerService.HintSize="364,72" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_3" message="Invalid_Input" />
+        </Sequence>
+      </Switch.Default>
+      <Assign x:Key="NGO" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[PathOfConfig]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">C:\Users\Dinesh\Documents\UiPath\rpa\training-e5-framework-master\Processes\NGOTask\WorkFlowConfig.txt</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="Covid" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[PathOfConfig]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">C:\Users\Dinesh\Documents\UiPath\rpa\training-e5-framework-master\Processes\CovidTask\WorkFlowConfig.txt</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="Acme" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[PathOfConfig]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">C:\Users\Dinesh\Documents\UiPath\rpa\training-e5-framework-master\Processes\AcmeTask\AcmePdfDownload\WorkFlowConfig.txt</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="EmailTask" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_6">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[PathOfConfig]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">C:\Users\Dinesh\Documents\UiPath\rpa\training-e5-framework-master\Processes\EmailTask\ReadMailAttachment\WorkFlowConfig.txt</InArgument>
+        </Assign.Value>
+      </Assign>
+    </Switch>
     <Sequence DisplayName="Load Config file" sap:VirtualizedContainerService.HintSize="552,274.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -108,7 +156,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadTextFile Content="[ConfigText]" DisplayName="Read Text File" FileName="Processes\NGOTask\WorkFlowConfig.txt" sap:VirtualizedContainerService.HintSize="384,80.6666666666667" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
+      <ui:ReadTextFile Content="[ConfigText]" DisplayName="Read Text File" FileName="[PathOfConfig]" sap:VirtualizedContainerService.HintSize="384,80.6666666666667" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -145,7 +193,7 @@
         </Assign.Value>
       </Assign>
     </Sequence>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[WorkflowToExecute]" sap:VirtualizedContainerService.HintSize="552,788" sap2010:WorkflowViewState.IdRef="Switch`1_4">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[WorkflowToExecute]" sap:VirtualizedContainerService.HintSize="496.666666666667,971.333333333333" sap2010:WorkflowViewState.IdRef="Switch`1_4">
       <Switch.Default>
         <ae:ThrowBusinessRuleException DisplayName="Throw business rule exception" sap:VirtualizedContainerService.HintSize="364,72" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_2" message="INVALID_WORKFLOW" />
       </Switch.Default>
@@ -153,17 +201,29 @@
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="njl:JObject" x:Key="FlowConfig">[WorkFlowConfig]</InArgument>
           <OutArgument x:TypeArguments="x:String" x:Key="ResOut">[ResOut]</OutArgument>
-          <InArgument x:TypeArguments="ui:Browser" x:Key="NGOBrowserTab">[BrowserTab]</InArgument>
+          <OutArgument x:TypeArguments="ui:Browser" x:Key="NGOBrowserTab">[BrowserTab]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="Covid" DisplayName="Invoke Main workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Processes\CovidTask\Main.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          <InArgument x:TypeArguments="njl:JObject" x:Key="FlowConfig">
+            <mva:VisualBasicValue x:TypeArguments="njl:JObject" ExpressionText="FlowConfig" />
+          </InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="ResOut">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ResOut" />
+          </OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="Acme" DisplayName="Invoke Main workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Processes\AcmeTask\Main.xaml">
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="Acme" DisplayName="Invoke Main workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Processes\AcmeTask\AcmePdfDownload\Main.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          <OutArgument x:TypeArguments="x:String" x:Key="ResOut">[ResOut]</OutArgument>
+          <InArgument x:TypeArguments="njl:JObject" x:Key="FlowConfig">[FlowConfig]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="EmailTask" DisplayName="Invoke Main workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Processes\EmailTask\ReadMailAttachment\Main.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <OutArgument x:TypeArguments="x:String" x:Key="ResOut">[ResOut]</OutArgument>
+          <InArgument x:TypeArguments="njl:JObject" x:Key="FlowConfig">[FlowConfig]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Switch>

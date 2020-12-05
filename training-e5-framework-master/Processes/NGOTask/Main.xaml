@@ -2,12 +2,12 @@
   <x:Members>
     <x:Property Name="FlowConfig" Type="InArgument(njl:JObject)" />
     <x:Property Name="ResOut" Type="OutArgument(x:String)" />
-    <x:Property Name="NGOBrowserTab" Type="InArgument(ui:Browser)" />
+    <x:Property Name="NGOBrowserTab" Type="OutArgument(ui:Browser)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>688.666666666667,487.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>948,487.333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -103,13 +103,13 @@
     </sap:WorkflowViewStateService.ViewState>
     <TryCatch DisplayName="NGO Task  - Try Catch" sap:VirtualizedContainerService.HintSize="438.666666666667,330.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
-        <Sequence DisplayName="NGo Task - Process" sap:VirtualizedContainerService.HintSize="454.666666666667,2219.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="NGo Task - Process" sap:VirtualizedContainerService.HintSize="454.666666666667,2448.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
-            <Variable x:TypeArguments="x:String" Default="NGO's (State-wise)" Name="SubTabName" />
+            <Variable x:TypeArguments="x:String" Name="SubTabName" />
             <Variable x:TypeArguments="s:String[]" Name="States" />
-            <Variable x:TypeArguments="x:Int32" Default="100" Name="SetItemsTableCount" />
+            <Variable x:TypeArguments="x:Int32" Name="SetItemsTableCount" />
             <Variable x:TypeArguments="x:Boolean" Name="PageButtonStatus" />
-            <Variable x:TypeArguments="x:String" Default="NGO Directory " Name="TabName" />
+            <Variable x:TypeArguments="x:String" Name="TabName" />
             <Variable x:TypeArguments="x:Int32" Name="TableRowCount" />
             <Variable x:TypeArguments="sd:DataTable" Name="StatesDetailsDataTable" />
             <Variable x:TypeArguments="x:Int32" Name="ResultDetailsTable" />
@@ -121,11 +121,7 @@
             <Variable x:TypeArguments="x:String" Name="MailUserName" />
             <Variable x:TypeArguments="x:String" Name="EmailPasswordString" />
             <Variable x:TypeArguments="ui:Browser" Name="NGOBrowserTab" />
-            <Variable x:TypeArguments="x:String" Name="URL">
-              <Variable.Default>
-                <Literal x:TypeArguments="x:String">https://ngodarpan.gov.in/index.php/home/</Literal>
-              </Variable.Default>
-            </Variable>
+            <Variable x:TypeArguments="x:String" Name="URL" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -133,6 +129,44 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="412.666666666667,189.333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[SubTabName]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[FlowConfig("SubTabName").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:Int32">[SetItemsTableCount]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:Int32">[cint(FlowConfig("SetItemsTableCount"))]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[TabName]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[FlowConfig("TabName").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[URL]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[FlowConfig("Url").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
           <ng:Launch_NGO DisplayName="Launch NGO" sap:VirtualizedContainerService.HintSize="412.666666666667,22" sap2010:WorkflowViewState.IdRef="Launch_NGO_1" NGOBrowserTab="[NGOBrowserTab]" Url="[URL]" />
           <nd:NavigateTab sap2010:Annotation.AnnotationText="Navigate StateWiese" sap:VirtualizedContainerService.HintSize="412.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="NavigateTab_1" NGOBrowserTab="[NGOBrowserTab]" SubTabName="[SubTabName]" TabName="[TabName]">
             <sap:WorkflowViewStateService.ViewState>

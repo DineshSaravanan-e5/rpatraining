@@ -1,4 +1,8 @@
 {
 "WorkFlowToExecute":"NGO",
-"States" : ["DAMAN & DIU","LAKSHADWEEP"]
+"States" : ["DAMAN & DIU","LAKSHADWEEP"],
+"SubTabName" : "NGO's (State-wise)",
+"SetItemsTableCount" : "100",
+"TabName" :"NGO Directory ",
+"Url" : "https://ngodarpan.gov.in/index.php/home/"
 }

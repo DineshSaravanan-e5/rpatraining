@@ -1,4 +1,7 @@
 {
-"WorkFlowToExecute":"NGO",
-"States" : ["DAMAN & DIU","LAKSHADWEEP"]
+"WorkFlowToExecute":"Covid",
+"TabName":"Explore",
+"SubTabName" :"Explore the Data",
+"CovidTabName" :"Global Overview",
+"CovidSubTabName" :"Cases and Deaths"
 }
